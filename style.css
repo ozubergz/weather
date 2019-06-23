@@ -1,0 +1,152 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.left_panel {
+  padding:  50px 9% 0px 50px;
+  justify-content: center;
+  width: 50%;
+}
+
+.left_panel h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 40px;
+  letter-spacing: 5px;
+  position: relative;
+  animation: textAppear 2s;
+}
+
+.left_panel h4 {
+  font-size: 30px;
+  font-weight: bold;
+  animation: textDrop 2s;
+}
+
+.left_panel h5 {
+  font-family: 'Quicksand',
+  sans-serif;
+  font-weight: bold;
+  animation: textDrop 3.5s;
+  font-size: 20px;
+}
+
+.left_panel .weather h1 {
+  color: #f97253;
+}
+
+.left_panel .weather h4 {
+  border-bottom: 2px solid #7eadee;
+}
+
+.left_panel .main {
+  position: relative;
+  text-align: right;
+  top: -10px;
+  left: 20%;
+}
+
+.left_panel .main h1 {
+  color: #2dd07b;
+}
+
+.left_panel .main h4 {
+  border-bottom: 2px solid #f97253;
+}
+
+.left_panel .location {
+  position: relative;
+  top: 10px;
+}
+
+.left_panel .location h1 {
+  color: #75a7ec;
+}
+
+.left_panel .location h4 {
+  border-bottom: 2px solid #e01e3b;
+}
+
+@keyframes textDrop {
+  0% { opacity: 0; margin-top: -40px;}
+  35% { opacity: 0; margin-top: -40px; }
+}
+
+@keyframes textAppear {
+  from { opacity: 0  }
+  to { opacity: 100% }
+}
+
+.right_panel {
+  background-color: rgb(160, 178, 238);
+  padding: 5%;
+  width: 65%;
+  transform: scaleX(0);
+  transform-origin: right;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+img {
+  background: #484f53;
+  border-radius: 100%;
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.img_desc {
+  text-align: center;
+  font-family: 'Fjalla One',
+  sans-serif;
+  color: rgb(165, 27, 50);
+}
+
+#celsius, #fahrenheit, #dash {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#loader {
+  position: absolute;
+  left: 18%;
+  top: 40%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 16px solid rgb(210, 218, 255);
+  border-top: 16px solid #a6c9c3;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#loading_message {
+  position: absolute;
+  z-index: 1;
+  left: 12%;
+  top: 60%;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg)}
+  to { transform: rotate(360deg)}
+}

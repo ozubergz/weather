@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="/style.e308ff8e.css">
+  <title>Weather</title>
+<script src="/style.e308ff8e.js"></script></head>
+<body>
+  <div id="container">
+      <div class="left_panel">
+        <div id="loader"></div>
+        <div id="loading_message">
+          <p>Please wait while we get your location.</p>
+          <p>Refresh if loading persists.</p>
+        </div>
+        <div class="weather" style="display: none" ;="">
+          <h1>RELAX GOOD... weather</h1>
+          <h4>forecast...</h4>
+          <h5>today: <span id="forecast"></span></h5>
+          <h5>description: <span id="description"></span></h5>
+          <h5>temp: <span id="temp"></span></h5>
+          <a href="#" class="button" id="celsius"> °C</a>
+          <span id="dash">|</span>
+          <a href="#" class="button" id="fahrenheit"> °F</a>
+        </div>
+        <div class="main" style="display: none">
+          <h1>...Main</h1>
+          <h4>...climate</h4>
+          <h5>humidity: <span id="humidity"></span></h5>
+          <h5>pressure: <span id="pressure"></span></h5>
+          <h5>temp_max: <span id="temp_max"></span></h5>
+          <h5>tem_min: <span id="temp_min"></span></h5>
+          <h5>wind_deg: <span id="wind_deg"></span></h5>
+          <h5>wind_speed: <span id="wind_speed"></span></h5>
+        </div>
+        <div class="location" style="display: none">
+          <h1>Location...</h1>
+          <h4>where you at...</h4>
+          <h5>latitude: <span id="lat"></span></h5>
+          <h5>longitude: <span id="lon"></span></h5>
+          <h5>name: <span id="name"></span></h5>
+          <h5>country: <span id="country"></span></h5>
+        </div>
+      </div>
+      <div class="right_panel">
+          <div>
+            <img class="img1" src="/rain.1631807f.svg">
+            <h3 class="img_desc">Rain</h3>
+          </div>
+          <div>
+            <img class="img2" src="/lightning.956af680.svg">
+            <h3 class="img_desc">Thunderstorm</h3>
+          </div>
+          <div>
+            <img class="img3" src="/clear.e5c67664.svg">
+            <h3 class="img_desc">Clear Sky</h3>
+          </div>
+          <div>
+            <img class="img4" src="/clouds.e5a2f7c5.svg">
+            <h3 class="img_desc">Cloudy</h3>
+          </div>
+          <div>
+            <img class="img5" src="/fog.0506d8ab.svg">
+            <h3 class="img_desc">Foggy/Mist</h3>
+          </div>
+          <div>
+            <img class="img6" src="/snow.82cb8a58.svg">
+            <h3 class="img_desc">Snowy</h3>
+          </div>
+      </div>
+    </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script src="/app.c328ef1a.js"></script>
+</body>
+</html>
